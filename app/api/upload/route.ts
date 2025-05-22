@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     const { imagekit, userId: bodyUserId } = body;
 
     if (bodyUserId !== userId) {
-      return NextResponse.json({ error: "Unauthorozed" }, { status: 401 });
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     if (!imagekit || !imagekit.url) {
